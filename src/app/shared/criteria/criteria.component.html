@@ -1,0 +1,19 @@
+<div class='row'>
+    <div class='col-md-2'>Filter by:</div>
+    <div class='col-md-4'>
+      <!-- <input type='text' [ngModel]='listFilter' 
+      (ngModelChange)="onfilterChange($event)"
+      /> -->
+      <!-- <input type='text' [(ngModel)]='listFilter'/> -->
+      <input type='text' [(ngModel)]='listFilter' #filterElement/> 
+      <!-- for communication using viewChild -->
+    </div>
+  </div>
+  <div class='row' *ngIf="displayDetail">
+    <div class='col-md-10'>
+      <h4>Filtered by: {{listFilter}}</h4>
+        <h4>Hits: {{hitCount}}</h4>  
+
+
+    </div>
+  </div>
